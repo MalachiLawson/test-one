@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://pchl2d46jgcj"]
 
+[ext_resource type="PackedScene" uid="uid://dt2qme3fw0n3v" path="res://stages/cave_test/data/player.tscn" id="1_1vhbf"]
 [ext_resource type="Texture2D" uid="uid://dus3yumu3fell" path="res://stages/cave_test/textures/floor.png" id="1_xrgo3"]
 [ext_resource type="Texture2D" uid="uid://dyufl6asad3oy" path="res://stages/cave_test/textures/backWalls.png" id="2_mr1vn"]
 [ext_resource type="Texture2D" uid="uid://b86gctuxwc4vs" path="res://stages/cave_test/textures/frontWalls.png" id="3_1vhbf"]
@@ -16,10 +17,21 @@ texture = ExtResource("1_xrgo3")
 position = Vector2(128, 64)
 texture = ExtResource("2_mr1vn")
 
-[node name="frontWalls" type="Sprite2D" parent="." unique_id=5162333]
-position = Vector2(128, 64)
-texture = ExtResource("3_1vhbf")
-
 [node name="outcrop" type="Sprite2D" parent="." unique_id=1435120961]
 position = Vector2(128, 64)
 texture = ExtResource("4_x2dbd")
+
+[node name="CharacterBody2D" parent="." unique_id=1607500478 instance=ExtResource("1_1vhbf")]
+position = Vector2(41, 72)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=514901354]
+position = Vector2(0, 2)
+zoom = Vector2(10, 10)
+limit_left = 0
+limit_top = 0
+limit_right = 256
+limit_bottom = 128
+
+[node name="frontWalls" type="Sprite2D" parent="." unique_id=5162333]
+position = Vector2(128, 64)
+texture = ExtResource("3_1vhbf")
