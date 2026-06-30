@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://pchl2d46jgcj"]
+
+[ext_resource type="Texture2D" uid="uid://dus3yumu3fell" path="res://stages/cave_test/textures/floor.png" id="1_xrgo3"]
+[ext_resource type="Texture2D" uid="uid://dyufl6asad3oy" path="res://stages/cave_test/textures/backWalls.png" id="2_mr1vn"]
+[ext_resource type="Texture2D" uid="uid://b86gctuxwc4vs" path="res://stages/cave_test/textures/frontWalls.png" id="3_1vhbf"]
+[ext_resource type="Texture2D" uid="uid://ojnhthse4pqu" path="res://stages/cave_test/textures/outcrop.png" id="4_x2dbd"]
+
+[node name="Cave" type="Node2D" unique_id=1067193908]
+
+[node name="floor" type="TextureRect" parent="." unique_id=1912454172]
+offset_right = 256.0
+offset_bottom = 128.0
+texture = ExtResource("1_xrgo3")
+
+[node name="backWalls" type="Sprite2D" parent="." unique_id=1040582490]
+position = Vector2(128, 64)
+texture = ExtResource("2_mr1vn")
+
+[node name="frontWalls" type="Sprite2D" parent="." unique_id=5162333]
+position = Vector2(128, 64)
+texture = ExtResource("3_1vhbf")
+
+[node name="outcrop" type="Sprite2D" parent="." unique_id=1435120961]
+position = Vector2(128, 64)
+texture = ExtResource("4_x2dbd")
