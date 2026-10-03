@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bya51axdosift"]
+
+[ext_resource type="Texture2D" uid="uid://b6rlcmxi50rfn" path="res://stages/room_test/caveRoom.png" id="1_b65up"]
+[ext_resource type="PackedScene" uid="uid://dt2qme3fw0n3v" path="res://stages/cave_test/data/player.tscn" id="2_dcme8"]
+[ext_resource type="Script" uid="uid://bbqsdk4ykodsx" path="res://stages/cave_test/data/test_teleport.gd" id="3_dcme8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a6dy"]
+size = Vector2(14, 1)
+
+[node name="Room" type="Node2D" unique_id=1804929052]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1859654700]
+position = Vector2(57.5, 57.5)
+scale = Vector2(1.796875, 1.796875)
+texture = ExtResource("1_b65up")
+
+[node name="player" parent="." unique_id=1607500478 instance=ExtResource("2_dcme8")]
+position = Vector2(56, 104)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1929405460]
+position = Vector2(0, 2)
+zoom = Vector2(10, 10)
+limit_left = 0
+limit_top = 0
+limit_right = 115
+limit_bottom = 115
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=1882883971]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="walls" unique_id=696779668]
+position = Vector2(1, 0)
+build_mode = 1
+polygon = PackedVector2Array(14, 115, 49, 115, 49, 117, 63, 117, 63, 115, 102, 115, 103, 56, 82, 42, 59, 42, 34, 55, 29, 75, 17, 100)
+
+[node name="teleport" type="Area2D" parent="." unique_id=855293118]
+script = ExtResource("3_dcme8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="teleport" unique_id=832738519]
+position = Vector2(57, 116.5)
+shape = SubResource("RectangleShape2D_2a6dy")

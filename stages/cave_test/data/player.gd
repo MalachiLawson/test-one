@@ -3,6 +3,9 @@ extends CharacterBody2D
 
 const SPEED = 50.0
 
+func _ready():
+	position = GlobalVariables.player_position
+
 # function to handle animation triggers
 func get_animation():
 
