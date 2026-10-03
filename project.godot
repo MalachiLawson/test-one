@@ -11,8 +11,8 @@ config_version=5
 [application]
 
 config/name="test-one"
-run/main_scene="uid://dt2qme3fw0n3v"
-config/features=PackedStringArray("4.6", "GL Compatibility")
+run/main_scene="uid://pchl2d46jgcj"
+config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
