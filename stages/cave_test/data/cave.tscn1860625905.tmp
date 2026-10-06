@@ -1,42 +1,55 @@
 [gd_scene format=3 uid="uid://pchl2d46jgcj"]
 
 [ext_resource type="PackedScene" uid="uid://dt2qme3fw0n3v" path="res://stages/cave_test/data/player.tscn" id="1_1vhbf"]
-[ext_resource type="Script" uid="uid://cngt7xpegtjwp" path="res://stages/cave_test/data/caveSpawning.gd" id="1_lgbse"]
 [ext_resource type="Texture2D" uid="uid://dus3yumu3fell" path="res://stages/cave_test/textures/floor.png" id="1_xrgo3"]
 [ext_resource type="Texture2D" uid="uid://dyufl6asad3oy" path="res://stages/cave_test/textures/backWalls.png" id="2_mr1vn"]
 [ext_resource type="Texture2D" uid="uid://b86gctuxwc4vs" path="res://stages/cave_test/textures/frontWalls.png" id="3_1vhbf"]
 [ext_resource type="Texture2D" uid="uid://ojnhthse4pqu" path="res://stages/cave_test/textures/outcrop.png" id="4_x2dbd"]
 [ext_resource type="Script" uid="uid://cxdce0hsngu6u" path="res://stages/cave_test/data/test_teleport2.gd" id="6_x2dbd"]
-[ext_resource type="PackedScene" uid="uid://dajdfcnq6hwlj" path="res://items/test_items/data/poo.tscn" id="8_lgbse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxxh0"]
 size = Vector2(7, 1)
 
 [node name="Cave" type="Node2D" unique_id=1067193908]
-y_sort_enabled = true
-script = ExtResource("1_lgbse")
-poo = ExtResource("8_lgbse")
-
-[node name="CharacterBody2D" parent="." unique_id=1607500478 instance=ExtResource("1_1vhbf")]
 
 [node name="floor" type="TextureRect" parent="." unique_id=1912454172]
-z_index = -2
-offset_right = 256.0
+offset_left = -1.0
+offset_right = 255.0
 offset_bottom = 128.0
 texture = ExtResource("1_xrgo3")
 
-[node name="backWalls" type="Sprite2D" parent="." unique_id=1040582490]
-z_index = -1
-position = Vector2(128, 64)
-texture = ExtResource("2_mr1vn")
-
 [node name="outcrop" type="Sprite2D" parent="." unique_id=1435120961]
-z_index = 1
 position = Vector2(128, 64)
 texture = ExtResource("4_x2dbd")
 
+[node name="backWalls" type="Sprite2D" parent="." unique_id=1040582490]
+position = Vector2(128, 64)
+texture = ExtResource("2_mr1vn")
+
+[node name="player" parent="." unique_id=1607500478 instance=ExtResource("1_1vhbf")]
+position = Vector2(41, 72)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=514901354]
+position = Vector2(0, 2)
+zoom = Vector2(10, 10)
+limit_left = 0
+limit_top = 0
+limit_right = 256
+limit_bottom = 128
+
+[node name="CanvasLayer" type="CanvasLayer" parent="player" unique_id=227411521]
+offset = Vector2(-150, 150)
+scale = Vector2(5, 5)
+transform = Transform2D(5, 0, 0, 5, -150, 150)
+
+[node name="Label" type="Label" parent="player/CanvasLayer" unique_id=1653745538]
+offset_left = 41.0
+offset_top = 74.0
+offset_right = 81.0
+offset_bottom = 97.0
+vertical_alignment = 2
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1891397727]
-z_index = 1
 position = Vector2(128, 64)
 texture = ExtResource("3_1vhbf")
 

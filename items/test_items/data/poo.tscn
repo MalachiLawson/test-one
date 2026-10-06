@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dajdfcnq6hwlj"]
+
+[ext_resource type="Script" uid="uid://bg1oxh2cp8n2i" path="res://items/test_items/data/poo.gd" id="1_68oug"]
+[ext_resource type="Texture2D" uid="uid://42604yadal4n" path="res://items/test_items/textures/poo1.png" id="1_o8wgf"]
+[ext_resource type="Texture2D" uid="uid://buc30bynv877q" path="res://items/test_items/textures/poo2.png" id="2_68oug"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc7ww"]
+atlas = ExtResource("1_o8wgf")
+region = Rect2(0, 0, 45, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmbgq"]
+atlas = ExtResource("2_68oug")
+region = Rect2(0, 0, 45, 54)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2a6dy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc7ww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmbgq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a6dy"]
+size = Vector2(36, 11)
+
+[node name="Poo" type="Node2D" unique_id=1240410005]
+scale = Vector2(0.120001376, 0.13636509)
+script = ExtResource("1_68oug")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=959105551]
+sprite_frames = SubResource("SpriteFrames_2a6dy")
+autoplay = "default"
+frame_progress = 0.9540952
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1956707110]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=736980550]
+position = Vector2(0, 23.5)
+shape = SubResource("RectangleShape2D_2a6dy")
