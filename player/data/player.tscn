@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dt2qme3fw0n3v"]
 
-[ext_resource type="Texture2D" uid="uid://lub1jxd2cti3" path="res://stages/cave_test/textures/frogSprite.png" id="1_a60xn"]
-[ext_resource type="Script" uid="uid://c0t3kxhv8g5d4" path="res://stages/cave_test/data/player.gd" id="1_niipf"]
+[ext_resource type="Texture2D" uid="uid://lub1jxd2cti3" path="res://player/textures/frogSprite.png" id="1_a60xn"]
+[ext_resource type="Script" uid="uid://c0t3kxhv8g5d4" path="res://player/data/player.gd" id="1_niipf"]
 [ext_resource type="Texture2D" uid="uid://42604yadal4n" path="res://items/test_items/textures/poo1.png" id="3_ydacn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_niipf"]
@@ -217,16 +217,18 @@ size = Vector2(10, 5)
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1607500478 groups=["player"]]
 script = ExtResource("1_niipf")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=565659053]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=565659053 groups=["player"]]
 sprite_frames = SubResource("SpriteFrames_jmn8j")
 animation = &"rightRun"
 autoplay = "rIdle"
+frame_progress = 0.0005115287
+offset = Vector2(-0.065, -5.945)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=641273679]
-position = Vector2(0, 7.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=641273679 groups=["player"]]
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_a60xn")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=289378831]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=289378831 groups=["player"]]
 position = Vector2(0, 2)
 zoom = Vector2(10, 10)
 limit_left = 0

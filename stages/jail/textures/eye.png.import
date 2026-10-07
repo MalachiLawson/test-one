@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lub1jxd2cti3"
-path="res://.godot/imported/frogSprite.png-19fbee030a600d28fbf2c2a58b56b737.ctex"
+uid="uid://b600ywt1hj83c"
+path="res://.godot/imported/eye.png-ea5fd0f901a81734289a974491e6a407.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stages/cave_test/textures/frogSprite.png"
-dest_files=["res://.godot/imported/frogSprite.png-19fbee030a600d28fbf2c2a58b56b737.ctex"]
+source_file="res://stages/jail/textures/eye.png"
+dest_files=["res://.godot/imported/eye.png-ea5fd0f901a81734289a974491e6a407.ctex"]
 
 [params]
 

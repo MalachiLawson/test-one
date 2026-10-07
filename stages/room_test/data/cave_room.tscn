@@ -45,7 +45,8 @@ position = Vector2(36, 90)
 position = Vector2(65, 65)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1348727050]
-position = Vector2(0.17499924, -0.56500244)
+position = Vector2(-3.8146973e-06, 1)
+scale = Vector2(1.015, 0.6)
 shape = SubResource("RectangleShape2D_2vkit")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1560548602]
