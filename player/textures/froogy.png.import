@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lub1jxd2cti3"
-path="res://.godot/imported/frogSprite.png-37697c20d60d3965babb510859cd6622.ctex"
+uid="uid://b7ljwfa78f6j8"
+path="res://.godot/imported/froogy.png-74f7c91ff2b3f04b90e8350c83475803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/textures/frogSprite.png"
-dest_files=["res://.godot/imported/frogSprite.png-37697c20d60d3965babb510859cd6622.ctex"]
+source_file="res://player/textures/froogy.png"
+dest_files=["res://.godot/imported/froogy.png-74f7c91ff2b3f04b90e8350c83475803.ctex"]
 
 [params]
 
